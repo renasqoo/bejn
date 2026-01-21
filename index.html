@@ -3,62 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BEJN</title>
+  <title>BEJN | Kadın Giyim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f8f8f8;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fafafa;
+      color: #333;
     }
     header {
-      background-color: #c2185b;
+      background: linear-gradient(135deg, #111, #333);
       color: white;
-      padding: 20px;
+      padding: 60px 20px;
       text-align: center;
     }
+    header h1 {
+      font-size: 48px;
+      letter-spacing: 4px;
+      margin: 0;
+    }
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+    nav {
+      background: white;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    nav a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
     .container {
-      padding: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
     .product {
       background: white;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      text-align: center;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
     }
     .product img {
       width: 100%;
-      border-radius: 8px;
+      height: 380px;
+      object-fit: cover;
+    }
+    .product-content {
+      padding: 20px;
     }
     .product h3 {
-      margin: 10px 0 5px;
+      margin: 0 0 10px;
+      font-size: 18px;
     }
     .product p {
-      color: #555;
+      font-size: 14px;
+      color: #666;
     }
     .price {
-      font-weight: bold;
-      color: #c2185b;
-      margin: 10px 0;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 15px 0;
     }
     .btn {
-      display: inline-block;
-      background-color: #25d366;
+      display: block;
+      text-align: center;
+      background: #000;
       color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
+      padding: 12px;
+      border-radius: 30px;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 14px;
     }
     footer {
-      background: #333;
+      margin-top: 60px;
+      background: #111;
       color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 20px;
+      padding: 30px 20px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
     }
   </style>
 </head>
@@ -66,29 +107,40 @@
 
 <header>
   <h1>BEJN</h1>
-  <p>Modern ve Şık Kadın Elbiseleri</p>
+  <p>Modern & Zamansız Kadın Giyim</p>
 </header>
+
+<nav>
+  <a href="#">Yeni Sezon</a>
+  <a href="#">Elbiseler</a>
+  <a href="#">İletişim</a>
+</nav>
 
 <div class="container">
   <div class="product">
-    <img src="https://via.placeholder.com/300x400" alt="Elbise 1" />
-    <h3>Yazlık Elbise</h3>
-    <p>Hafif kumaş, rahat kesim</p>
-    <div class="price">499 TL</div>
-    <a class="btn" href="https://wa.me/90XXXXXXXXXX">WhatsApp ile Sipariş</a>
+    <img src="https://via.placeholder.com/400x500" alt="Ürün 1">
+    <div class="product-content">
+      <h3>Minimal Siyah Elbise</h3>
+      <p>Günlük ve özel günler için ideal</p>
+      <div class="price">799 TL</div>
+      <a class="btn" href="https://wa.me/90XXXXXXXXXX">WhatsApp ile Sipariş</a>
+    </div>
   </div>
 
   <div class="product">
-    <img src="https://via.placeholder.com/300x400" alt="Elbise 2" />
-    <h3>Şık Gece Elbisesi</h3>
-    <p>Özel günler için ideal</p>
-    <div class="price">799 TL</div>
-    <a class="btn" href="https://wa.me/90XXXXXXXXXX">WhatsApp ile Sipariş</a>
+    <img src="https://via.placeholder.com/400x500" alt="Ürün 2">
+    <div class="product-content">
+      <h3>Bej Uzun Elbise</h3>
+      <p>Rahat kesim, premium kumaş</p>
+      <div class="price">899 TL</div>
+      <a class="btn" href="https://wa.me/90XXXXXXXXXX">WhatsApp ile Sipariş</a>
+    </div>
   </div>
 </div>
 
 <footer>
-  <p>© 2026 BEJN | Instagram: @bejnmode</p>
+  <p>© 2026 BEJN</p>
+  <p><a href="https://instagram.com/bejnmode">Instagram: @bejnmode</a></p>
 </footer>
 
 </body>
