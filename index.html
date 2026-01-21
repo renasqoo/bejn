@@ -1,230 +1,262 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BEJN | Modern Kadın Giyim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEJN | Modern Kadın Giyim</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f3ede4;
-      color: #222;
-    }
+body{
+font-family:'Poppins',sans-serif;
+background:#f5efe8;
+color:#222;
+}
 
-    /* ÜST MENÜ */
-    header {
-      background: #111;
-      color: white;
-      padding: 16px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* HEADER */
+header{
+background:#111;
+color:#fff;
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    header .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      letter-spacing: 4px;
-    }
+header a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-size:14px;
+}
 
-    header nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
+.logo{
+font-family:'Playfair Display',serif;
+font-size:32px;
+letter-spacing:5px;
+}
 
-    /* KAPAK (HERO) */
-    .hero {
-      height: 85vh;
-      background:
-        linear-gradient(
-          rgba(0,0,0,0.35),
-          rgba(0,0,0,0.35)
-        ),
-        radial-gradient(circle at top,
-          #f6efe6 0%,
-          #e6d6c3 40%,
-          #c9b29a 70%,
-          #9c846d 100%
-        );
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
+/* HERO */
+.hero{
+position:relative;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
 
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 72px;
-      letter-spacing: 8px;
-      margin: 0;
-    }
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:url("hero-bg.jpg") center/cover no-repeat;
+filter:blur(2px);
+opacity:.35;
+}
 
-    .hero p {
-      font-size: 22px;
-      margin-top: 16px;
-    }
+.hero-main{
+position:relative;
+display:flex;
+align-items:center;
+gap:60px;
+max-width:1200px;
+padding:40px;
+z-index:2;
+}
 
-    /* ÜRÜNLER */
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 70px 40px;
-    }
+.hero-img{
+position:relative;
+}
 
-    .section h2 {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 34px;
-      margin-bottom: 50px;
-    }
+.hero-img img{
+width:420px;
+border-radius:12px;
+box-shadow:0 25px 50px rgba(0,0,0,.25);
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
+.hero-overlay{
+position:absolute;
+bottom:-40px;
+right:-60px;
+width:220px;
+border-radius:12px;
+border:6px solid #f5efe8;
+}
 
-    .product {
-      background: white;
-      border-radius: 14px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-      overflow: hidden;
-      text-align: center;
-    }
+.hero-text{
+max-width:420px;
+}
 
-    .product img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-    }
+.hero-text h1{
+font-family:'Playfair Display',serif;
+font-size:70px;
+letter-spacing:8px;
+}
 
-    .product h3 {
-      margin: 18px 0 6px;
-      font-size: 16px;
-    }
+.hero-text p{
+margin-top:15px;
+font-size:20px;
+}
 
-    .product p {
-      margin: 0 0 14px;
-      font-weight: 500;
-    }
+/* PRODUCTS */
+.section{
+max-width:1200px;
+margin:auto;
+padding:80px 40px;
+}
 
-    .product a {
-      display: inline-block;
-      margin-bottom: 22px;
-      padding: 10px 24px;
-      background: #111;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 14px;
-    }
+.section h2{
+text-align:center;
+font-family:'Playfair Display',serif;
+font-size:34px;
+margin-bottom:50px;
+}
 
-    /* WHATSAPP BUTON */
-    .cta {
-      text-align: center;
-      margin-bottom: 70px;
-    }
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+}
 
-    .cta a {
-      background: #2e8b57;
-      color: white;
-      padding: 16px 34px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 500;
-    }
+.product{
+background:white;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 12px 25px rgba(0,0,0,.1);
+text-align:center;
+}
 
-    /* FOOTER */
-    footer {
-      background: #111;
-      color: white;
-      padding: 30px 20px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+.product img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
 
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
+.product h3{
+margin:15px 0 5px;
+font-size:16px;
+}
 
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 52px; }
-    }
-  </style>
+.product p{
+font-weight:500;
+margin-bottom:12px;
+}
+
+.product a{
+display:inline-block;
+margin-bottom:20px;
+padding:10px 24px;
+background:#111;
+color:white;
+border-radius:25px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* WHATSAPP */
+.cta{
+text-align:center;
+margin-bottom:70px;
+}
+
+.cta a{
+background:#3fa36c;
+color:white;
+padding:16px 36px;
+border-radius:30px;
+text-decoration:none;
+font-size:16px;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:white;
+padding:30px 40px;
+display:flex;
+justify-content:space-between;
+font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">BEJN</div>
-  <nav>
-    <a href="#">Anasayfa</a>
-    <a href="#">Ürünler</a>
-    <a href="#">İletişim</a>
-    <a href="https://instagram.com/bejnmode">@bejnmode</a>
-  </nav>
+<nav>
+<a href="#">Anasayfa</a>
+<a href="#">Ürünler</a>
+</nav>
+
+<div class="logo">BEJN</div>
+
+<nav>
+<a href="#">İletişim</a>
+<a href="https://instagram.com/bejnmode">@bejnmode</a>
+</nav>
 </header>
 
 <section class="hero">
-  <div>
-    <h1>BEJN</h1>
-    <p>Modern ve Şık Kadın Elbiseleri</p>
-  </div>
+<div class="hero-main">
+
+<div class="hero-img">
+<img src="hero.jpg">
+<img src="hero-overlay.jpg" class="hero-overlay">
+</div>
+
+<div class="hero-text">
+<h1>BEJN</h1>
+<p>Modern ve Şık Kadın Elbiseleri</p>
+</div>
+
+</div>
 </section>
 
 <section class="section">
-  <h2>Öne Çıkan Ürünler</h2>
+<h2>Öne Çıkan Ürünler</h2>
 
-  <div class="products">
-    <div class="product">
-      <img src="product1.jpg">
-      <h3>Siyah Midi Elbise</h3>
-      <p>250 TL</p>
-      <a href="https://wa.me/90XXXXXXXXXX">Detaylı İncele</a>
-    </div>
+<div class="products">
+<div class="product">
+<img src="product1.jpg">
+<h3>Siyah Midi Elbise</h3>
+<p>250 TL</p>
+<a href="#">Detaylı İncele</a>
+</div>
 
-    <div class="product">
-      <img src="product2.jpg">
-      <h3>Beyaz Dantel Elbise</h3>
-      <p>300 TL</p>
-      <a href="https://wa.me/90XXXXXXXXXX">Detaylı İncele</a>
-    </div>
+<div class="product">
+<img src="product2.jpg">
+<h3>Beyaz Dantel Elbise</h3>
+<p>300 TL</p>
+<a href="#">Detaylı İncele</a>
+</div>
 
-    <div class="product">
-      <img src="product3.jpg">
-      <h3>Bej Saten Elbise</h3>
-      <p>280 TL</p>
-      <a href="https://wa.me/90XXXXXXXXXX">Detaylı İncele</a>
-    </div>
+<div class="product">
+<img src="product3.jpg">
+<h3>Bej Saten Elbise</h3>
+<p>280 TL</p>
+<a href="#">Detaylı İncele</a>
+</div>
 
-    <div class="product">
-      <img src="product4.jpg">
-      <h3>Çiçekli Maxi Elbise</h3>
-      <p>275 TL</p>
-      <a href="https://wa.me/90XXXXXXXXXX">Detaylı İncele</a>
-    </div>
-  </div>
+<div class="product">
+<img src="product4.jpg">
+<h3>Çiçekli Maxi Elbise</h3>
+<p>275 TL</p>
+<a href="#">Detaylı İncele</a>
+</div>
+</div>
 </section>
 
 <div class="cta">
-  <a href="https://wa.me/90XXXXXXXXXX">WhatsApp ile Sipariş Ver</a>
+<a href="https://wa.me/90XXXXXXXXXX">WhatsApp ile Sipariş Ver</a>
 </div>
 
 <footer>
-  <div>© 2026 BEJN</div>
-  <div><a href="https://instagram.com/bejnmode">Instagram: @bejnmode</a></div>
+<div>© 2026 BEJN – Tüm Hakları Saklıdır</div>
+<div>@bejnmode</div>
 </footer>
 
 </body>
